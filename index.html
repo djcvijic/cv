@@ -1,4 +1,75 @@
 <html>
-    <head></head>
-    <body>HELLO WORLD</body>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                background-color: whitesmoke;
+            }
+
+            .grid-item-header { grid-area: header; height: 150px; background-color: darkblue; }
+            .grid-item-contact { grid-area: contact; background-color: lightgray; }
+            .grid-item-sidebar { grid-area: sidebar; background-color: lightgray; }
+            .grid-item-bar { grid-area: bar; height: 10px; background-color: powderblue; }
+            .grid-item-about { grid-area: about; }
+            .grid-item-experience { grid-area: experience; }
+            .grid-item-footer { grid-area: footer; height: 100px; background-color: powderblue; }
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'header header header'
+                    'contact bar bar'
+                    'contact about about'
+                    'sidebar experience experience'
+                    'footer footer footer';
+                background-color: white;
+                width: 900px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item-header">
+                Djordje Cvijic
+                SENIOR SOFTWARE ENGINEER
+            </div>
+            <div class="grid-item-contact">
+                +381 64 3503 659
+                djordje.cvijic.etf@gmail.com
+                Belgrade, Serbia
+                LinkedIn
+                Game jam portfolio
+            </div>
+            <div class="grid-item-sidebar">
+                SKILLS
+                EDUCATION
+                University of Belgrade, School of Electrical Engineering
+                Bachelor of Engineering - Computer and Information Sciences
+                2009 - 2019
+                Grade: 8.29 (out of 10)
+            </div>
+            <div class="grid-item-bar"></div>
+            <div class="grid-item-about">
+                ABOUT ME
+                I am an experienced software development engineer, specialized in game development and full stack web development. I have spent 4 years working on one unreleased and two live mobile games in Unity engine (C#). I previously spent 5 years as a full stack web developer, building public websites and internal tools in a variety of technologies, including PHP, a classic front-end web stack, and Vue.js. I have a passion for code design and architecture, automated testing, knowledge transfer, UX, and game design.
+            </div>
+            <div class="grid-item-experience">
+                EXPERIENCE
+                Software Development Engineer - Top Eleven
+                Nordeus · Full-time / Belgrade, Serbia / Jul 2020 - Apr 2022 · 1 year 10 months
+                Worked as a Unity game developer on the mobile free-to-play sports game Top Eleven. I owned game client development within the Live Ops team. Conquered challenges related to working on a live popular flagship product, such as careful planning, code design, and coordination between teams.
+                Software Development Engineer - Heroic
+                Nordeus · Full-time / Belgrade, Serbia / Nov 2018 - Jun 2020 · 1 year 8 months
+                Worked as a Unity game developer on the mobile free-to-play strategy game Heroic. Collaborated with and supported other disciplines, made some design decisions, and got involved with the community. Saw the game through several stages of development, from beta to sunsetting.
+                Software Development Engineer - CRM
+                Nordeus · Full-time / Belgrade, Serbia / Apr 2018 - Oct 2018 · 7 months
+                Worked as a full-stack web developer on an all-in-one internal tool (CRM + support + analytics) and related services. The tech stack was PHP and Vue.js.
+                Software Development Engineer - Web & Internal Tools
+                Nordeus · Full-time / Belgrade, Serbia / Sep 2013 - Mar 2017 · 3 years 7 months
+                Worked as a full-stack web developer on a variety of projects including global web pages and internal tools. Became a jack-of-all trades with the variety of tech used, most utilized were PHP and a classic front-end web stack.
+            </div>
+            <div class="grid-item-footer"></div>
+          </div> 
+    </body>
 </html>
