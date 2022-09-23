@@ -40,7 +40,7 @@ p {
 
 body {
     margin: 0;
-    padding: 32px 0;
+    padding: 0 0 32px 0;
     background-color: white;
     font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -55,7 +55,7 @@ body {
 
 .main {
     margin: auto;
-    width: 900px;
+    width: 960px;
 }
 
 .main > div {
@@ -146,4 +146,16 @@ body {
 
 .skill-subsection > ul > li:last-child {
     border: none;
+}
+
+@media print {
+    body {
+        padding: 0;
+    }
+
+    .section-header {
+        padding: 0;
+    }
+
+    .section-skills { page-break-before: always; }
 }
