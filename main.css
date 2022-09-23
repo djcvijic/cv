@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("fonts/ProximaNova.otf");
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: url("fonts/UbuntuMono-Regular.ttf");
+}
+
+a:link { color: #CD2553; }
+a:visited { color: #CD2553; }
+a:hover { color: #CD2553; }
+a:active { color: #CD2553; }
+
+h1 {
+    margin: 0 0 16px 0;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    color: #0099ff;
+}
+
+h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 32px 0;
+    background-color: white;
+    font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.icon, .fa-solid, .fa-brands {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 0 0;
+    text-align: center;
+}
+
+.main {
+    margin: auto;
+    width: 900px;
+}
+
+.main > div {
+    margin: 32px 0;
+}
+
+.section-header {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 32px;
+    padding: 0 0 32px 0;
+}
+
+.header-photo > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.header-name-and-title {
+    align-self: end;
+}
+
+.header-name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+    color: #0099ff;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.section-contact-and-about {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 32px;
+}
+
+.section-contact > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.section-contact > ul > li { 
+    display: block;
+    font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.section-about > p {
+    font-size: 20px;
+}
+
+.section-experience > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.section-experience > ul > li {
+    margin: 0 0 16px 0;
+}
+
+.skill-subsection {
+    margin: 0 0 16px 0;
+}
+
+.skill-subsection > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+.skill-subsection > ul > li {
+    display: inline;
+    padding: 4px 12px;
+    border-right: 1px solid rgba(0, 0, 0, 0.7);
+    margin: 0 0 0 -4px;
+}
+
+.skill-subsection > ul > li:last-child {
+    border: none;
+}
