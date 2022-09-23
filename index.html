@@ -66,7 +66,7 @@
 
             .section-header {
                 display: grid;
-                grid-template-columns: min-content auto;
+                grid-template-columns: max-content auto;
                 gap: 30px;
             }
 
@@ -93,6 +93,12 @@
                 letter-spacing: 5px;
             }
 
+            .section-contact-and-about {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 30px;
+            }
+
             .section-contact > ul {
                 margin: 0;
                 padding: 0;
@@ -105,6 +111,20 @@
                 font-weight: bold;
                 font-size: 20px;
                 margin: 8px 0;
+            }
+
+            .section-about > p {
+                font-size: 20px;
+            }
+
+            .section-experience > ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            .section-experience > ul > li {
+                margin: 0 0 16px 0;
             }
 
             .skill-subsection {
@@ -120,23 +140,13 @@
 
             .skill-subsection > ul > li {
                 display: inline;
-                padding: 0.2em 1.1em;
-                border-right: 1px solid rgba(0, 0, 0, 0.8);
-                margin: 0 0 0 -6px;
+                padding: 4px 12px;
+                border-right: 1px solid rgba(0, 0, 0, 0.7);
+                margin: 0 0 0 -4px;
             }
 
             .skill-subsection > ul > li:last-child {
                 border: none;
-            }
-
-            .section-experience > ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-            }
-
-            .section-experience > ul > li {
-                margin: 0 0 16px 0;
             }
         </style>
         <link href="fontawesome/css/fontawesome.min.css" rel="stylesheet"/>
@@ -161,29 +171,31 @@
                     </div>
                 </div>
             </div>
-            <div class="section-contact">
-                <h1>CONTACT</h1>
-                <ul>
-                    <li>
-                        <a href="tel:+381643503659"><i class="fa-solid fa-phone"></i>+381 64 3503 659</a>
-                    </li>
-                    <li>
-                        <a href="mailto:djordje.cvijic.etf@gmail.com"><i class="fa-solid fa-envelope"></i>djordje.cvijic.etf@gmail.com</a>
-                    </li>
-                    <li>
-                        <a href="https://goo.gl/maps/tkRd3tPGLgNCCwnZ8"><i class="fa-solid fa-location-dot"></i>Belgrade, Serbia</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/djordje-cvijic/"><i class="fa-brands fa-linkedin"></i>LinkedIn profile</a>
-                    </li>
-                    <li>
-                        <a href="https://itch.io/c/1129719/games-by-jole"><i class="fa-brands fa-itch-io"></i>Game jam portfolio</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="section-about">
-                <h1>ABOUT ME</h1>
-                <p>I am an experienced software development engineer, specialized in game development and full stack web development. I have spent 4 years working on one unreleased and two live mobile games in Unity engine (C#). I previously spent 5 years as a full stack web developer, building public websites and internal tools in a variety of technologies, including PHP, a classic front-end web stack, and Vue.js. I have a passion for code design and architecture, automated testing, knowledge transfer, UX, and game design.</p>
+            <div class="section-contact-and-about">
+                <div class="section-contact">
+                    <h1>CONTACT</h1>
+                    <ul>
+                        <li>
+                            <a href="tel:+381643503659"><i class="fa-solid fa-phone"></i>+381 64 3503 659</a>
+                        </li>
+                        <li>
+                            <a href="mailto:djordje.cvijic.etf@gmail.com"><i class="fa-solid fa-envelope"></i>djordje.cvijic.etf@gmail.com</a>
+                        </li>
+                        <li>
+                            <a href="https://goo.gl/maps/tkRd3tPGLgNCCwnZ8"><i class="fa-solid fa-location-dot"></i>Belgrade, Serbia</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/djordje-cvijic/"><i class="fa-brands fa-linkedin"></i>LinkedIn profile</a>
+                        </li>
+                        <li>
+                            <a href="https://itch.io/c/1129719/games-by-jole"><i class="fa-brands fa-itch-io"></i>Game jam portfolio</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section-about">
+                    <h1>ABOUT ME</h1>
+                    <p>I am an experienced software development engineer, specialized in game development and full stack web development. I have spent 4 years working on one unreleased and two live mobile games in Unity engine (C#). I previously spent 5 years as a full stack web developer, building public websites and internal tools in a variety of technologies, including PHP, a classic front-end web stack, and Vue.js. I have a passion for code design and architecture, automated testing, knowledge transfer, UX, and game design.</p>
+                </div>
             </div>
             <div class="section-experience">
                 <h1>EXPERIENCE</h1>
