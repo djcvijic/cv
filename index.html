@@ -1,22 +1,48 @@
 <html>
     <head>
         <style>
-            a:link { color: #CD2553; text-decoration: none; }
-            a:visited { color: #CD2553; text-decoration: none; }
-            a:hover { color: #CD2553; text-decoration: none; }
-            a:active { color: #CD2553; text-decoration: none; }
+            a:link { color: #CD2553; }
+            a:visited { color: #CD2553; }
+            a:hover { color: #CD2553; }
+            a:active { color: #CD2553; }
 
             h1 {
                 margin: 0 0 15px 0;
                 font-size: 28px;
                 font-weight: normal;
                 letter-spacing: 5px;
+                color: #0099ff;
+            }
+
+            h2 {
+                margin: 0 0 5px 0;
+                font-size: 20px;
+                font-weight: normal;
+            }
+
+            h3 {
+                margin: 0 0 5px 0;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            p {
+                margin: 0;
             }
 
             body {
                 margin: 0;
                 background-color: white;
                 font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+            .icon, .fa-solid, .fa-brands {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                margin: 0 10px 0 0;
+                text-align: center;
             }
 
             .main {
@@ -57,7 +83,13 @@
                 letter-spacing: 5px;
             }
 
-            .contact-item { 
+            .section-contact > ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            .section-contact > ul > li { 
                 display: block;
                 font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
                 font-weight: bold;
@@ -65,22 +97,47 @@
                 margin: 5px 0;
             }
 
-            .section-about {
-                font-size: 18px;
+            .skill-subsection {
+                margin-bottom: 10px;
             }
 
-            .section-skills { }
+            .skill-subsection > ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                line-height: 1.5;
+            }
 
-            .section-experience { }
+            .skill-subsection > ul > li {
+                display: inline;
+                padding: 0.2em 1.1em;
+                border-right: 1px solid rgba(0, 0, 0, 0.8);
+                margin: 0 0 0 -6px;
+            }
 
-            .section-education { }
+            .skill-subsection > ul > li:last-child {
+                border: none;
+            }
+
+            .section-experience > ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            .section-experience > ul > li {
+                margin: 0 0 10px 0;
+            }
         </style>
+        <link href="fontawesome/css/fontawesome.min.css" rel="stylesheet"/>
+        <link href="fontawesome/css/solid.min.css" rel="stylesheet"/>
+        <link href="fontawesome/css/brands.min.css" rel="stylesheet"/>
     </head>
     <body>
         <div class="main">
             <div class="section-header">
                 <div class="header-photo">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQEYdkXKdS4l3Q/profile-displayphoto-shrink_400_400/0/1660390913770?e=1669248000&v=beta&t=76kuwGVUH5_fWu34KAyJuW23lC8o0CoTlSPqEd51WWo"/>
+                    <img src="images/photo.jpg"/>
                 </div>
                 <div class="header-name-and-title">
                     <div class="header-name">
@@ -94,51 +151,115 @@
             </div>
             <div class="section-contact">
                 <h1>CONTACT</h1>
-                <div class="contact-item">
-                    <a href="tel:+381643503659">+381 64 3503 659</a>
-                </div>
-                <div class="contact-item">
-                    <a href="mailto:djordje.cvijic.etf@gmail.com">djordje.cvijic.etf@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://goo.gl/maps/tkRd3tPGLgNCCwnZ8">Belgrade, Serbia</a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://www.linkedin.com/in/djordje-cvijic/">LinkedIn profile</a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://itch.io/c/1129719/games-by-jole">Game jam portfolio</a>
-                </div>
+                <ul>
+                    <li>
+                        <a href="tel:+381643503659"><i class="fa-solid fa-phone"></i>+381 64 3503 659</a>
+                    </li>
+                    <li>
+                        <a href="mailto:djordje.cvijic.etf@gmail.com"><i class="fa-solid fa-envelope"></i>djordje.cvijic.etf@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://goo.gl/maps/tkRd3tPGLgNCCwnZ8"><i class="fa-solid fa-location-dot"></i>Belgrade, Serbia</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/djordje-cvijic/"><i class="fa-brands fa-linkedin"></i>LinkedIn profile</a>
+                    </li>
+                    <li>
+                        <a href="https://itch.io/c/1129719/games-by-jole"><i class="fa-brands fa-itch-io"></i>Game jam portfolio</a>
+                    </li>
+                </ul>
             </div>
             <div class="section-about">
                 <h1>ABOUT ME</h1>
-                <div>I am an experienced software development engineer, specialized in game development and full stack web development. I have spent 4 years working on one unreleased and two live mobile games in Unity engine (C#). I previously spent 5 years as a full stack web developer, building public websites and internal tools in a variety of technologies, including PHP, a classic front-end web stack, and Vue.js. I have a passion for code design and architecture, automated testing, knowledge transfer, UX, and game design.</div>
+                <p>I am an experienced software development engineer, specialized in game development and full stack web development. I have spent 4 years working on one unreleased and two live mobile games in Unity engine (C#). I previously spent 5 years as a full stack web developer, building public websites and internal tools in a variety of technologies, including PHP, a classic front-end web stack, and Vue.js. I have a passion for code design and architecture, automated testing, knowledge transfer, UX, and game design.</p>
+            </div>
+            <div class="section-experience">
+                <h1>EXPERIENCE</h1>
+                <ul>
+                    <li>
+                        <h2>Senior Software Engineer</h2>
+                        <h3><a href="https://twodesperados.com/"><img class="icon" src="images/two-desperados.jpg"/>Two Desperados</a> · Full-time / Belgrade, Serbia / Oct 2022 - Present</h3>
+                        <p></p>
+                    </li>
+                    <li>
+                        <h2>Software Development Engineer - <a href="https://www.topeleven.com/">Top Eleven</a></h2>
+                        <h3><a href="https://www.nordeus.com"><img class="icon" src="images/nordeus.jpg"/>Nordeus</a> · Full-time / Belgrade, Serbia / Jul 2020 - Apr 2022 · 1 year 10 months</h3>
+                        <p>Worked as a Unity game developer on the mobile free-to-play sports game Top Eleven. I owned game client development within the Live Ops team. Conquered challenges related to working on a live popular flagship product, such as careful planning, code design, and coordination between teams.</p>
+                    </li>
+                    <li>
+                        <h2>Software Development Engineer - <a href="https://www.heroicgame.com/">Heroic</a></h2>
+                        <h3><a href="https://www.nordeus.com"><img class="icon" src="images/nordeus.jpg"/>Nordeus</a> · Full-time / Belgrade, Serbia / Nov 2018 - Jun 2020 · 1 year 8 months</h3>
+                        <p>Worked as a Unity game developer on the mobile free-to-play strategy game Heroic. Collaborated with and supported other disciplines, made some design decisions, and got involved with the community. Saw the game through several stages of development, from beta to sunsetting.</p>
+                    </li>
+                    <li>
+                        <h2>Software Development Engineer - CRM</h2>
+                        <h3><a href="https://www.nordeus.com"><img class="icon" src="images/nordeus.jpg"/>Nordeus</a> · Full-time / Belgrade, Serbia / Apr 2018 - Oct 2018 · 7 months</h3>
+                        <p>Worked as a full-stack web developer on an all-in-one internal tool (CRM + support + analytics) and related services. The tech stack was PHP and Vue.js.</p>
+                    </li>
+                    <li>
+                        <h2>Software Development Engineer - Web & Internal Tools</h2>
+                        <h3><a href="https://www.nordeus.com"><img class="icon" src="images/nordeus.jpg"/>Nordeus</a> · Full-time / Belgrade, Serbia / Sep 2013 - Mar 2017 · 3 years 7 months</h3>
+                        <p>Worked as a full-stack web developer on a variety of projects including global web pages and internal tools. Became a jack-of-all trades with the variety of tech used, most utilized were PHP and a classic front-end web stack.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-education">
+                <h1>EDUCATION</h1>
+                <h2><a href="https://www.etf.bg.ac.rs/en"><img class="icon" src="images/etf.jpg"/>University of Belgrade, School of Electrical Engineering</a></h2>
+                <p>Bachelor of Engineering - Computer and Information Sciences</p>
+                <p>2009 - 2019</p>
+                <p>Grade: 8.29 (out of 10)</h3>
             </div>
             <div class="section-skills">
                 <h1>SKILLS</h1>
+                <div class="skill-subsection">
+                    <h2>Industry knowledge</h2>
+                    <ul>
+                        <li>Game development</li>
+                        <li>Tools development</li>
+                        <li>Web development</li>
+                        <li>Code design</li>
+                        <li>Architecture</li>
+                        <li>DDD</li>
+                        <li>Refactoring</li>
+                        <li>Automated testing</li>
+                        <li>TDD</li>
+                        <li>Documentation</li>
+                    </ul>
+                </div>
+                <div class="skill-subsection">
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>Unity</li>
+                        <li>C#</li>
+                        <li>Vue.js</li>
+                        <li>PHP</li>
+                        <li>Symfony framework</li>
+                        <li>SQL</li>
+                        <li>Bash</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="skill-subsection">
+                    <h2>Soft skills</h2>
+                    <ul>
+                        <li>Knowledge sharing</li>
+                        <li>Mentoring</li>
+                        <li>Pair programming</li>
+                        <li>Event storming</li>
+                    </ul>
+                </div>
+                <div class="skill-subsection">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>Serbian (native)</li>
+                        <li>English (native)</li>
+                    </ul>
+                </div>
             </div>
-            <div class="section--experience">
-                EXPERIENCE
-                Software Development Engineer - Top Eleven
-                Nordeus · Full-time / Belgrade, Serbia / Jul 2020 - Apr 2022 · 1 year 10 months
-                Worked as a Unity game developer on the mobile free-to-play sports game Top Eleven. I owned game client development within the Live Ops team. Conquered challenges related to working on a live popular flagship product, such as careful planning, code design, and coordination between teams.
-                Software Development Engineer - Heroic
-                Nordeus · Full-time / Belgrade, Serbia / Nov 2018 - Jun 2020 · 1 year 8 months
-                Worked as a Unity game developer on the mobile free-to-play strategy game Heroic. Collaborated with and supported other disciplines, made some design decisions, and got involved with the community. Saw the game through several stages of development, from beta to sunsetting.
-                Software Development Engineer - CRM
-                Nordeus · Full-time / Belgrade, Serbia / Apr 2018 - Oct 2018 · 7 months
-                Worked as a full-stack web developer on an all-in-one internal tool (CRM + support + analytics) and related services. The tech stack was PHP and Vue.js.
-                Software Development Engineer - Web & Internal Tools
-                Nordeus · Full-time / Belgrade, Serbia / Sep 2013 - Mar 2017 · 3 years 7 months
-                Worked as a full-stack web developer on a variety of projects including global web pages and internal tools. Became a jack-of-all trades with the variety of tech used, most utilized were PHP and a classic front-end web stack.
-            </div>
-            <div class="section-education">
-                EDUCATION
-                University of Belgrade, School of Electrical Engineering
-                Bachelor of Engineering - Computer and Information Sciences
-                2009 - 2019
-                Grade: 8.29 (out of 10)
-            </div>
-          </div> 
+        </div>
+        <script>
+            function externalLinks() {   for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {     var b = c[a];     b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")   } } ; externalLinks(); 
+        </script>
     </body>
 </html>
