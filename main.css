@@ -8,6 +8,14 @@
     src: url("fonts/UbuntuMono-Regular.ttf");
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 a:link {
     color: #CD2553;
 }
@@ -173,7 +181,7 @@ body {
 }
 
 .skill-subsection>ul>li {
-    display: inline;
+    display: inline-block;
     padding: 4px 12px;
     border-right: 1px solid rgba(0, 0, 0, 0.7);
     margin: 0 0 0 -4px;
@@ -201,6 +209,41 @@ body {
     opacity: 0;
     pointer-events: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        margin: 0 32px;
+        width: auto;
+    }
+
+    .section-header {
+        grid-template-columns: none;
+        padding: 0;
+    }
+
+    .header-photo {
+        text-align: center;
+    }
+
+    .header-photo>img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .section-contact-and-about {
+        grid-template-columns: none;
+    }
+
+    .section-contact>ul>li, #click-to-reveal-contact-info {
+        font-size: 16px;
+    }
+
+    #to-top {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
 }
 
 @media print {
