@@ -8,10 +8,21 @@
     src: url("fonts/UbuntuMono-Regular.ttf");
 }
 
-a:link { color: #CD2553; }
-a:visited { color: #CD2553; }
-a:hover { color: #CD2553; }
-a:active { color: #CD2553; }
+a:link {
+    color: #CD2553;
+}
+
+a:visited {
+    color: #CD2553;
+}
+
+a:hover {
+    color: #CD2553;
+}
+
+a:active {
+    color: #CD2553;
+}
 
 h1 {
     margin: 0 0 16px 0;
@@ -45,7 +56,9 @@ body {
     font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.icon, .fa-solid, .fa-brands {
+.icon,
+.fa-solid,
+.fa-brands {
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -58,7 +71,7 @@ body {
     width: 960px;
 }
 
-.main > div {
+.section {
     margin: 32px 0;
 }
 
@@ -66,10 +79,10 @@ body {
     display: grid;
     grid-template-columns: max-content auto;
     gap: 32px;
-    padding: 0 0 32px 0;
+    padding: 32px 0;
 }
 
-.header-photo > img {
+.header-photo>img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -98,13 +111,13 @@ body {
     gap: 32px;
 }
 
-.section-contact > ul {
+.section-contact>ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.section-contact > ul > li { 
+.section-contact>ul>li, #click-to-reveal-contact-info {
     display: block;
     font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
     font-weight: bold;
@@ -112,17 +125,23 @@ body {
     margin: 8px 0;
 }
 
-.section-about > p {
+#contact-info {
+    transition: opacity 400ms;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.section-about>p {
     font-size: 20px;
 }
 
-.section-experience > ul {
+.section-experience>ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.section-experience > ul > li {
+.section-experience>ul>li {
     margin: 0 0 16px 0;
 }
 
@@ -130,32 +149,54 @@ body {
     margin: 0 0 16px 0;
 }
 
-.skill-subsection > ul {
+.skill-subsection>ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     line-height: 1.5;
 }
 
-.skill-subsection > ul > li {
+.skill-subsection>ul>li {
     display: inline;
     padding: 4px 12px;
     border-right: 1px solid rgba(0, 0, 0, 0.7);
     margin: 0 0 0 -4px;
 }
 
-.skill-subsection > ul > li:last-child {
+.skill-subsection>ul>li:last-child {
     border: none;
 }
 
+#to-top {
+    width: 200px;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 32px;
+    left: auto;
+    right: 64px;
+    color: #CD2553;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+    transition: opacity 400ms;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
 @media print {
-    body {
-        padding: 0;
+    .no-page-break {
+        page-break-inside: avoid;
     }
 
-    .section-header {
-        padding: 0;
+    #contact-info {
+        transition: none;
     }
 
-    .section-skills { page-break-before: always; }
+    #to-top {
+        display: none;
+    }
 }
