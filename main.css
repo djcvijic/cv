@@ -119,6 +119,10 @@ body {
     gap: 32px;
 }
 
+.section-contact {
+    min-width: 360px;
+}
+
 .section-contact>ul {
     margin: 0;
     padding: 0;
@@ -134,9 +138,9 @@ body {
 }
 
 #contact-info {
-    transition: opacity 400ms;
-    opacity: 0;
-    pointer-events: none;
+    max-height: 0;
+    transition: max-height 400ms;
+    overflow: hidden;
 }
 
 .section-about>p {
@@ -227,12 +231,17 @@ body {
     }
 
     .header-photo>img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
 
     .section-contact-and-about {
         grid-template-columns: none;
+    }
+
+    .section-contact {
+        min-width: auto;
+        min-height: 100px;
     }
 
     .section-contact>ul>li, #click-to-reveal-contact-info {

@@ -50,8 +50,7 @@ function revealContactInformation() {
         clickToReveal.style.setProperty("display", "none");
         emailAddressLink.setAttribute("href", "mailTo:" + "djordje.cvijic.etf" + "@" + "gmail.com");
         emailAddressText.innerText = "djordje.cvijic.etf" + "@" + "gmail.com";
-        contactInformation.style.setProperty("opacity", 1);
-        contactInformation.style.setProperty("pointer-events", "auto");
+        contactInformation.style.setProperty("max-height", "200px");
     };
 
     clickToReveal.addEventListener("click", reveal);
