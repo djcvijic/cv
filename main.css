@@ -174,7 +174,7 @@ body {
 .skills-grid {
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .skill-subsection {
