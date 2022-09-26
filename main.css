@@ -177,10 +177,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.skill-subsection {
-    margin: 0 0 16px 0;
-}
-
 .skill-subsection>ul {
     margin: 0;
     padding: 0;
@@ -249,7 +245,7 @@ body {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(2, max-content);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #to-top {
