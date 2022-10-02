@@ -12,7 +12,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -54,7 +56,7 @@ h3 {
 }
 
 h4 {
-    margin: 0 0 8px 0;
+    margin: 16px 0 8px 0;
     font-size: 16px;
     font-weight: normal;
 }
@@ -103,32 +105,33 @@ ul ::marker {
     display: block;
     margin: 0 0 16px 0;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .click-to-show-less {
     display: none;
     margin: 0 0 16px 0;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .info-short {
-    max-height: 999px;
-    transition: max-height 400ms;
+    max-height: 1999px;
     overflow: hidden;
 }
 
 .info-long {
     max-height: 0;
-    transition: max-height 400ms;
+    transition: max-height 400ms, margin 400ms;
     overflow: hidden;
 }
 
-.info-long>ul {
+.info-long ul {
     margin: 0;
     padding: 0 0 0 16px;
 }
 
-.info-long>ul>li {
+.info-long ul>li {
     margin: 0 0 4px 0;
 }
 
@@ -178,7 +181,8 @@ ul ::marker {
     list-style-type: none;
 }
 
-.section-contact>ul>li, #click-to-reveal-contact-info {
+.section-contact>ul>li,
+#click-to-reveal-contact-info {
     display: block;
     font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
     font-weight: bold;
@@ -206,6 +210,14 @@ ul ::marker {
     margin: 0 0 16px 0;
     border-left: 4px solid #0099ff;
     padding-left: 16px;
+}
+
+.section-experience>ul>li.info-long.info-hidden {
+    margin: 0;
+}
+
+.section-education {
+    page-break-inside: avoid;
 }
 
 .section-education>ul {
@@ -293,7 +305,8 @@ ul ::marker {
         min-height: 80px;
     }
 
-    .section-contact>ul>li, #click-to-reveal-contact-info {
+    .section-contact>ul>li,
+    #click-to-reveal-contact-info {
         font-size: 16px;
     }
 
@@ -319,10 +332,11 @@ ul ::marker {
 
     .info-short {
         transition: none;
+        max-height: 1999px !important;
     }
 
     .info-long {
-        transition: none;
+        display: none;
     }
 
     #contact-info {

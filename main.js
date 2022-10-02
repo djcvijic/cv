@@ -14,8 +14,7 @@ function externalLinks() {
         var link = links[i];
         if (link.getAttribute("href")
             && link.getAttribute("href") !== "javascript:;"
-            && link.hostname !== location.hostname)
-        { 
+            && link.hostname !== location.hostname) {
             link.target = "_blank";
         }
     }
@@ -75,24 +74,30 @@ function showMoreOrLess() {
         var clickToShowMore = e.target;
         var section = closest(clickToShowMore, ".section");
         var clickToShowLess = section.getElementsByClassName("click-to-show-less")[0];
-        var infoShort = section.getElementsByClassName("info-short")[0];
-        var infoLong = section.getElementsByClassName("info-long")[0];
+        var infoShort = section.getElementsByClassName("info-short");
+        var infoLong = section.getElementsByClassName("info-long");
         clickToShowMore.style.setProperty("display", "none");
         clickToShowLess.style.setProperty("display", "block");
-        if (!!infoShort) infoShort.style.setProperty("max-height", "0");
-        if (!!infoLong) infoLong.style.setProperty("max-height", "999px");
+        Array.from(infoShort).forEach(el => el.style.setProperty("max-height", "0"));
+        Array.from(infoLong).forEach(el => {
+            el.style.setProperty("max-height", "1999px");
+            el.classList.remove("info-hidden");
+        });
     };
 
     var showLess = function (e) {
         var clickToShowLess = e.target;
         var section = closest(clickToShowLess, ".section");
         var clickToShowMore = section.getElementsByClassName("click-to-show-more")[0];
-        var infoShort = section.getElementsByClassName("info-short")[0];
-        var infoLong = section.getElementsByClassName("info-long")[0];
+        var infoShort = section.getElementsByClassName("info-short");
+        var infoLong = section.getElementsByClassName("info-long");
         clickToShowLess.style.setProperty("display", "none");
         clickToShowMore.style.setProperty("display", "block");
-        if (!!infoShort) infoShort.style.setProperty("max-height", "999px");
-        if (!!infoLong) infoLong.style.setProperty("max-height", "0");
+        Array.from(infoShort).forEach(el => el.style.setProperty("max-height", "1999px"));
+        Array.from(infoLong).forEach(el => {
+            el.style.setProperty("max-height", "0");
+            el.classList.add("info-hidden");
+        });
     };
 
     Array.from(document.getElementsByClassName("click-to-show-more")).forEach(el => {
