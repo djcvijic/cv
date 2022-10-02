@@ -56,8 +56,7 @@ h3 {
 h4 {
     margin: 0 0 8px 0;
     font-size: 16px;
-    font-weight: bold;
-    opacity: 0.5;
+    font-weight: normal;
 }
 
 p {
@@ -103,11 +102,13 @@ ul ::marker {
 .click-to-show-more {
     display: block;
     margin: 0 0 16px 0;
+    font-weight: bold;
 }
 
 .click-to-show-less {
     display: none;
     margin: 0 0 16px 0;
+    font-weight: bold;
 }
 
 .info-short {
@@ -219,6 +220,10 @@ ul ::marker {
     padding-left: 16px;
 }
 
+.section-skills {
+    page-break-inside: avoid;
+}
+
 .skills-grid {
     display: grid;
     gap: 32px;
@@ -304,10 +309,6 @@ ul ::marker {
 }
 
 @media print {
-    .no-page-break {
-        page-break-inside: avoid;
-    }
-
     .click-to-show-more {
         opacity: 0;
     }
