@@ -53,6 +53,13 @@ h3 {
     font-style: italic;
 }
 
+h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
 p {
     margin: 0;
 }
@@ -62,6 +69,10 @@ body {
     padding: 0 0 32px 0;
     background-color: white;
     font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ul ::marker {
+    color: #0099ff;
 }
 
 .icon,
@@ -81,6 +92,43 @@ body {
 
 .section {
     margin: 32px 0;
+}
+
+.section-title {
+    display: grid;
+    grid-template-columns: auto max-content;
+    gap: 0 32px;
+}
+
+.click-to-show-more {
+    display: block;
+    margin: 0 0 16px 0;
+}
+
+.click-to-show-less {
+    display: none;
+    margin: 0 0 16px 0;
+}
+
+.info-short {
+    max-height: 999px;
+    transition: max-height 400ms;
+    overflow: hidden;
+}
+
+.info-long {
+    max-height: 0;
+    transition: max-height 400ms;
+    overflow: hidden;
+}
+
+.info-long>ul {
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+.info-long>ul>li {
+    margin: 0 0 4px 0;
 }
 
 .section-header {
@@ -183,10 +231,6 @@ body {
     list-style-position: inside;
 }
 
-.skill-subsection>ul ::marker {
-    color: #0099ff;
-}
-
 .skill-subsection>ul>li {
     margin: 0 0 4px 0;
 }
@@ -215,6 +259,10 @@ body {
     .main {
         margin: 0 32px;
         width: auto;
+    }
+
+    .section-title {
+        grid-template-columns: none;
     }
 
     .section-header {
@@ -258,6 +306,22 @@ body {
 @media print {
     .no-page-break {
         page-break-inside: avoid;
+    }
+
+    .click-to-show-more {
+        opacity: 0;
+    }
+
+    .click-to-show-less {
+        opacity: 0;
+    }
+
+    .info-short {
+        transition: none;
+    }
+
+    .info-long {
+        transition: none;
     }
 
     #contact-info {

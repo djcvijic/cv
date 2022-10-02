@@ -1,3 +1,14 @@
+function closest(el, selector) {
+    while (el) {
+        el = el.parentElement;
+        if (el && el.matches(selector)) {
+            return el;
+        }
+    }
+
+    return null;
+}
+
 function externalLinks() {
     for (var links = document.getElementsByTagName("a"), i = 0; i < links.length; i++) {
         var link = links[i];
@@ -58,3 +69,38 @@ function revealContactInformation() {
 }
 
 revealContactInformation();
+
+function showMoreOrLess() {
+    var showMore = function (e) {
+        var clickToShowMore = e.target;
+        var section = closest(clickToShowMore, ".section");
+        var clickToShowLess = section.getElementsByClassName("click-to-show-less")[0];
+        var infoShort = section.getElementsByClassName("info-short")[0];
+        var infoLong = section.getElementsByClassName("info-long")[0];
+        clickToShowMore.style.setProperty("display", "none");
+        clickToShowLess.style.setProperty("display", "block");
+        if (!!infoShort) infoShort.style.setProperty("max-height", "0");
+        if (!!infoLong) infoLong.style.setProperty("max-height", "999px");
+    };
+
+    var showLess = function (e) {
+        var clickToShowLess = e.target;
+        var section = closest(clickToShowLess, ".section");
+        var clickToShowMore = section.getElementsByClassName("click-to-show-more")[0];
+        var infoShort = section.getElementsByClassName("info-short")[0];
+        var infoLong = section.getElementsByClassName("info-long")[0];
+        clickToShowLess.style.setProperty("display", "none");
+        clickToShowMore.style.setProperty("display", "block");
+        if (!!infoShort) infoShort.style.setProperty("max-height", "999px");
+        if (!!infoLong) infoLong.style.setProperty("max-height", "0");
+    };
+
+    Array.from(document.getElementsByClassName("click-to-show-more")).forEach(el => {
+        el.addEventListener("click", showMore);
+    });
+    Array.from(document.getElementsByClassName("click-to-show-less")).forEach(el => {
+        el.addEventListener("click", showLess);
+    });
+}
+
+showMoreOrLess();
